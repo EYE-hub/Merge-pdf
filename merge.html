@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta content="IE=edge" http-equiv="X-UA-Compatible">
+  <meta content="width=device-width,initial-scale=1" name="viewport">
+  <meta content="description" name="description">
+  <meta name="google" content="notranslate" />
+  <meta content="Mashup templates have been developped by Orson.io team" name="author">
+
+<div align="center">
+            <h1>MERGE PDF file</h1>
+            <p>
+  {% with messages = get_flashed_messages() %}
+  {% if messages %}
+    <ul class=flashes>
+    {% for message in messages %}
+      <li>{{ message }}</li>
+    {% endfor %}
+    </ul>
+  {% endif %}
+{% endwith %}
+</p>
+    <form action='/merge.html' method=post enctype=multipart/form-data>
+      
+      <input type=file name=files[] multiple="true">
+      <input type=submit value=Upload >
+    </form>
+    <a href="/return-file" target="blank"><button>Download</button></a>
+
+</div>
+               
+
+
+
+</html>
